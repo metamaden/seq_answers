@@ -11,7 +11,7 @@ Various tools and methods will be added periodically to describe pipelines for p
 Many viable strategies abound for handling NGS data. The best strategy will depend on factors like your experimental design, comfort level with coding, and logistics of data access and manipulation. 
 
 # Repositories
-Sequence data can be stored in many formats (eg. fastq, fasta, bed, bam, sam, wig, bigwig, etc.  etc.) and can be found in many places online. Several large public repositories that specialize in sequence data storage exist (SRA and EBA). Other repositories are more general but will occasionally include sequence data, typically in a more processed form (eg. GEO).
+Sequence data can be stored in many formats (eg. fastq, fasta, bed, bam, sam, wig, bigwig, etc.  etc.) and can be found in many places online. Appendix 1 includes a list of many of the most commonly used public repositories for storing published sequenceing data. Several large public repositories that specialize in sequence data storage exist (SRA and EBA). Other repositories are more general but will occasionally include sequence data, typically in a more processed form (eg. [bed](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE59395) and [bw](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi) files on GEO).
 
 ## The Entrez System
 The Entrez system, hosted and maintained by NCBI, is an interconnected system of repositories for biological and clinical research. It includes many commonly used databases, such as GEO, SRA, dbGap, PubMed, etc. Studies and study data are often indexed in many ways using a sophisticated informatics semantics that enables detailed and granular data storage and reference. To avoid getting overwhelmed, it's best to think not in terms of redundancies (eg. "there are many id's referring to the same information and I must memorize them all!"), but in terms of convenience (eg. "there is a distinct id for a distinct aspect of the data that will be particularly handy for certain bioinformatics applications, and less handy for other applications!").  
@@ -30,4 +30,14 @@ Files can be remotely acessed through a selection of repo's, or uploaded directl
 
 # Coding, Scripting, and Programming
 
+# Appendices
+## Apendix 1: List of Public Sequence Data Repositories and Systems
+Databases and Repositories:
+1. [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/geo/) - resource for cataloging study, sample, and data platform data. Occasionally contains sequence data, but usually in a preprocessed or pre-filtered format (eg. bedfiles, bw, etc.). Handy modules and tools for remote access are available. 
+2. [Sequence Read Archive (SRA)](https://www.ncbi.nlm.nih.gov/sra) - resource for cataloging sequence data samples and meta-data, with occasional browser reference to a FASTQ file (if a FASTQ is unavailable through the SRA browser, check ENA, described below, or use the fastq-dump utility in the Entrez toolkit, described above).
+3. [European Nucleotide Archive (ENA)](https://www.ebi.ac.uk/ena) - resource for published un-preprocessed FASTQ files, with handy access through Galaxy browser. 
+4. [UCSC Genome Table Browser](https://genome.ucsc.edu/cgi-bin/hgTables?GALAXY_URL=https%3A//usegalaxy.org/tool_runner&tool_id=ucsc_table_direct1&hgta_compressType=none&sendToGalaxy=1&hgta_outputType=bed) - resource for mainly bed, bam, and wig-type files of sequence data commonly used for visualization in ideogram track format. 
+
+Systems: 
+1. The Entrez System - engine powering cross-database queries for NCBI and NLM ([more info](https://en.wikipedia.org/wiki/Entrez))
 
