@@ -2,26 +2,30 @@
 Sequencing data preprocessing
 
 # Purpose
-This repo is a knowledge base of preprocessing information and lessons learned in handing NGS sequencing data. Some of the files here are recreated directly from certain resoures, such as the hg19 build shell script from bowtie 2, and all rights are preserved as stipulated by the original authors of those files. 
+This repo is a knowledge base of preprocessing information and lessons learned in handing next generation sequencing (NGS) data. Some of the files here are recreated directly from certain resoures, such as the hg19 build shell script from bowtie 2, and all rights are preserved as stipulated by the original authors of those files. 
 
-# Sequencing Pipelines
-Various tools and methods will be added periodically to describe pipelines for preparing and analyzing sequencing data of various kinds.
+### What is Sequencing Data?
 
-# Platforms
+# Accessing and Handling Sequencing Data
+
+### Platforms for Analysis of Sequencing Data
 Many viable strategies abound for handling NGS data. The best strategy will depend on factors like your experimental design, comfort level with coding, and logistics of data access and manipulation. 
 
-# Repositories
+### Sequencing Pipelines
+Various tools and methods will be added periodically to describe pipelines for preparing and analyzing sequencing data of various kinds.
+
+### Sequencing Data Repositories
 Sequence data can be stored in many [formats](https://galaxyproject.org/learn/datatypes/) (eg. fastq, fasta, bed, bam, sam, wig, bigwig, etc.  etc.) and can be found in many places online. Appendix 1 includes a list of many of the most commonly used public repositories for storing published sequenceing data. Several large public repositories that specialize in sequence data storage exist (SRA and EBA). Other repositories are more general but will occasionally include sequence data, typically in a more processed form (eg. [bed](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE59395) and [bw](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi) files on GEO).
 
-## The Entrez System
+### The Entrez System
 The Entrez system, hosted and maintained by NCBI, is an interconnected system of repositories for biological and clinical research. It includes many commonly used databases, such as GEO, SRA, dbGap, PubMed, etc. Studies and study data are often indexed in many ways using a sophisticated informatics semantics that enables detailed and granular data storage and reference. 
 
 To avoid getting overwhelmed, it's best to think not in terms of redundancies (eg. "there are many id's referring to the same information and I must memorize them all!"), but in terms of convenience (eg. "there is a distinct id for a distinct aspect of the data that will be particularly handy for certain bioinformatics applications, and less handy for other applications!").  
 
-# Remote/Cloud 
+### Remote Access and Cloud Platforms, for Compute Performance
 Galaxy is a powerful online platform, and it simplifies the handling of large amounts of data in memory by allocating around 1Tb of cloud space to the user, for free. Various iterations of the Galaxy platform are specially available for specific institutions, such as Fredhutch.io Galaxy. 
 
-## Interfacing with the Sequence Read Archive and uploading to Galaxy
+### Interfacing with the Sequence Read Archive and uploading to Galaxy
 Files can be remotely acessed through a selection of repo's, or uploaded directly using FTP. Galaxy provides many useful resources for accessing data remotely from commonly used resources like the EBA and UCSC tables. However, some files may not be available through these resources. In these cases, it may be necesary to orchestrate some variation of the following in order to make a FASTQ file available to use on Galaxy:
 
 1. Download the [SRA toolkit](https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/). This is a set of functions to conveneient and remotely interface with various Entrez system databases, and especially the SRA. 
@@ -31,6 +35,11 @@ Files can be remotely acessed through a selection of repo's, or uploaded directl
 5. Upload the FASTQ files to your Galaxy session (remember: specify a genome build in this step if you can! Otherwise analysis and visualization options will be limited or made more complicated).
 
 # Coding, Scripting, and Programming
+This section is intended for users more comfortable with computer programming, scripting, and command line work, and will overview steps and options for different types of pipelines and use cases for sequencing data.
+
+### ChIP-Seq Preprocessing and Analysis Pipelines
+
+### Assembling Your Own Workflow for Sequencing Data
 
 # Appendices
 ## Apendix 1: List of Public Sequence Data Repositories and Systems
