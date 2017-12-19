@@ -42,13 +42,20 @@ Analysis involving sequencing data usually starts with an experimental design. D
 
 A considerable amount of time can be spent determining whether preprocessed data is available, and whether it will suffice in an experiment that requires harmonized data between two studies. For instance, you might consider starting with preprocessed, pre-called peak bedfiles or bigwig files from GEO, only to find that files of the same format from a second study seem to show platform-specific differences (eg. experiment 2 samples were run on a different platform, and have 2-10x as many total peaks called, or a difference that we wouldn't expect to be accounted for by biological differences between samples in the experiments). Clearly, this cohort or batch effect will need to be reconciled before any cross-comparison of peak data between studies is possible.  
 
+### General Considerations
+Sequence data can be generated from many types of experiments, and the specific experiment conditions will likely dictate certain measures be taken in your workflow while excluding other possible measures. One important thing to note is that you will work with many types of sequence file formats, each containing different types of information and intended for different steps in the workflow. FASTQ is typically the least processed or most raw data form, while downstream analysis can be run with a myriad of other data types derived from the read file, including bed, bam, sam, wig, and bigwig. It is also important to note that the greater your knowledge a priori of the biological system studied, the better the workflow you can design. For instance, knowing you will be analyzing narrow peaks in a ChIP-Seq experiment will change the types of peak calling and analysis tools you will consider. 
+
+### Early quality control
+Read files in FASTQ or FASTA format should initially be inspected and analyzed using a quality control software, such as FASTQC and multiqc (both available in GALAXY, or through CRAN as an R package). This step enables an approximation of quality by basepair location across all reads in the samples. If reads have, for instance, systematic low quality at the start and end positions, it may be necessary to initially trim all of the reads. These initial QC measures can reduce the memory footprint of the files you work with, as well as the compute time for mapping and analysis.  
+
 ### Mapping
-BWA, bowtie, bowtie2. 
+BWA, bowtie, bowtie2. With bowtie and other programs, an index genome must be built before an alignment can be performed. This could involve running a pre-written script, as shown in the misc directory of this repository, or running a command. 
 
 ### Peak Calling
-MACS, MACS2. Broad vs. narrow peak calling. 
+Peak calling strategies depend on many factors, one of the most important being the anticipated sizes of the peaks. Narrow or small peaks should be called using different software from large or broad peaks, as different software is optimized for different run conditions. MACS, MACS2. Broad vs. narrow peak calling. 
 
 ### ChIP-Seq Preprocessing and Analysis Pipelines
+Chromatin Immunoprecipitation followed by sequencing, or ChIP-Seq, has become a viable and important method of measuring various types of post-translational histone chemical modifications and enzymatic affinities, for the purpose of elucidating epigenetic mechanisms. Sequencing data generated in ChIP-Seq experiments are subjected to many of the same data handling and processing measures as sequencing data for RNAseq or other expression assay, with several important exceptions. First, ChIP-Seq data can a priori be anticipated to yield small or narrow peaks of overlapping reads, versus wide or broad overlapping read peaks. This difference changes the type of math and statistics that should be applied in the ChIP-Seq workflow. Another consideration is the potential for bias in read coverage due to open versus closed chromatin states. This potential for bias makes it even more important for ChIP-Seq experiments to include DNA input controls for tested samples, which enables control peak signal to be subtracted from the sample peaks (which include signal and noise), to increase the signal to noise ratio of the dataset. 
 
 ### Assembling Your Own Workflow for Sequencing Data
 
