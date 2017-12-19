@@ -61,7 +61,7 @@ Chromatin Immunoprecipitation followed by sequencing, or ChIP-Seq, has become a 
 
 # Appendices
 ## Apendix 1: List of Public Sequence Data Repositories and Systems
-Databases and Repositories:
+
 | Database/Resource | Info |
 | --- | --- |
 | 1. [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/geo/) | resource for cataloging study, sample, and data platform data. Occasionally contains sequence data, but usually in a preprocessed or pre-filtered format (eg. bedfiles, bw, etc.). Handy modules and tools for remote access are available. | 
