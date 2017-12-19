@@ -37,6 +37,17 @@ Files can be remotely acessed through a selection of repo's, or uploaded directl
 # Coding, Scripting, and Programming
 This section is intended for users more comfortable with computer programming, scripting, and command line work, and will overview steps and options for different types of pipelines and use cases for sequencing data.
 
+### Order of Operations
+Analysis involving sequencing data usually starts with an experimental design. Determine what sample groups you are comparing, what data is available, and the feasibility of carrying out your desired analysis. Especially in cases where you are re-analyzing public published data from multiple cohorts of samples, it is vital to plan out the experimental design before attempting to construct a workflow. In some cases, batch (in this case, experiment) will be confounded by factors such as treatment (eg. all normal samples are from experiment 1, and all disease samples are from experiment 2) or platform (eg. all normal samples were analyzed on an old sequencer platform, while disease samples were analyzed using a newer generation of that platform) or both treatment and platform!
+
+A considerable amount of time can be spent determining whether preprocessed data is available, and whether it will suffice in an experiment that requires harmonized data between two studies. For instance, you might consider starting with preprocessed, pre-called peak bedfiles or bigwig files from GEO, only to find that files of the same format from a second study seem to show platform-specific differences (eg. experiment 2 samples were run on a different platform, and have 2-10x as many total peaks called, or a difference that we wouldn't expect to be accounted for by biological differences between samples in the experiments). Clearly, this cohort or batch effect will need to be reconciled before any cross-comparison of peak data between studies is possible.  
+
+### Mapping
+BWA, bowtie, bowtie2. 
+
+### Peak Calling
+MACS, MACS2. Broad vs. narrow peak calling. 
+
 ### ChIP-Seq Preprocessing and Analysis Pipelines
 
 ### Assembling Your Own Workflow for Sequencing Data
