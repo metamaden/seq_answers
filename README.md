@@ -62,12 +62,11 @@ Chromatin Immunoprecipitation followed by sequencing, or ChIP-Seq, has become a 
 # Appendices
 ## Apendix 1: List of Public Sequence Data Repositories and Systems
 Databases and Repositories:
----
-1. [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/geo/):``- resource for cataloging study, sample, and data platform data. Occasionally contains sequence data, but usually in a preprocessed or pre-filtered format (eg. bedfiles, bw, etc.). Handy modules and tools for remote access are available.`` 
-2. [Sequence Read Archive (SRA)](https://www.ncbi.nlm.nih.gov/sra):``- resource for cataloging sequence data samples and meta-data, with occasional browser reference to a FASTQ file (if a FASTQ is unavailable through the SRA browser, check ENA, described below, or use the fastq-dump utility in the Entrez toolkit, described above).``
----
-3. [European Nucleotide Archive (ENA)](https://www.ebi.ac.uk/ena) - resource for published un-preprocessed FASTQ files, with handy access through Galaxy browser. 
-4. [UCSC Genome Table Browser](https://genome.ucsc.edu/cgi-bin/hgTables?GALAXY_URL=https%3A//usegalaxy.org/tool_runner&tool_id=ucsc_table_direct1&hgta_compressType=none&sendToGalaxy=1&hgta_outputType=bed) - resource for mainly bed, bam, and wig-type files of sequence data commonly used for visualization in ideogram track format. 
+| --- | --- |
+| 1. [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/geo/) | resource for cataloging study, sample, and data platform data. Occasionally contains sequence data, but usually in a preprocessed or pre-filtered format (eg. bedfiles, bw, etc.). Handy modules and tools for remote access are available. | 
+| 2. [Sequence Read Archive (SRA)](https://www.ncbi.nlm.nih.gov/sra) | resource for cataloging sequence data samples and meta-data, with occasional browser reference to a FASTQ file (if a FASTQ is unavailable through the SRA browser, check ENA, described below, or use the fastq-dump utility in the Entrez toolkit, described above). |
+| 3. [European Nucleotide Archive (ENA)](https://www.ebi.ac.uk/ena) | resource for published un-preprocessed FASTQ files, with handy access through Galaxy browser. |
+| 4. [UCSC Genome Table Browser](https://genome.ucsc.edu/cgi-bin/hgTables?GALAXY_URL=https%3A//usegalaxy.org/tool_runner&tool_id=ucsc_table_direct1&hgta_compressType=none&sendToGalaxy=1&hgta_outputType=bed) | resource for mainly bed, bam, and wig-type files of sequence data commonly used for visualization in ideogram track format. |
 
 Systems: 
 1. The Entrez System - engine powering cross-database queries for NCBI and NLM ([more info](https://en.wikipedia.org/wiki/Entrez))
