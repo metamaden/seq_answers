@@ -41,4 +41,4 @@ Databases and Repositories:
 Systems: 
 1. The Entrez System - engine powering cross-database queries for NCBI and NLM ([more info](https://en.wikipedia.org/wiki/Entrez))
 2. [Galaxy browser](https://usegalaxy.org/) - excellent and free cloud-based platform with pre-loaded utilities for preprocessing, analyzing, and visualizing all manner of sequence and array data. Considerable amount of free cloud storage and memory space for the user, with reasonable speed and highly convenient integrated database cross-talk. ([info](https://galaxyproject.org/learn/), [videos](https://vimeo.com/galaxyproject), [news](https://galaxyproject.org/news/))
-
+3. [SRA toolkit](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software) - toolkit for conveniently and remotely interfacing with Entrez system databases, and especially for remotely downloading FASTQ files using sample SRA IDs ([info about the fastq-dump command](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc&f=fastq-dump)).
