@@ -62,6 +62,7 @@ Chromatin Immunoprecipitation followed by sequencing, or ChIP-Seq, has become a 
 # Appendices
 ## Apendix 1: List of Public Sequence Data Repositories and Systems
 Databases and Repositories:
+| Database/Resource | Info |
 | --- | --- |
 | 1. [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/geo/) | resource for cataloging study, sample, and data platform data. Occasionally contains sequence data, but usually in a preprocessed or pre-filtered format (eg. bedfiles, bw, etc.). Handy modules and tools for remote access are available. | 
 | 2. [Sequence Read Archive (SRA)](https://www.ncbi.nlm.nih.gov/sra) | resource for cataloging sequence data samples and meta-data, with occasional browser reference to a FASTQ file (if a FASTQ is unavailable through the SRA browser, check ENA, described below, or use the fastq-dump utility in the Entrez toolkit, described above). |
