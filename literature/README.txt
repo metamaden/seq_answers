@@ -1,1 +1,1 @@
-This dir contains studies and related data for the ENCODE and related consortium projects.
+This dir includes helpful literature and related data for working with various types of sequenceing datatypes.
