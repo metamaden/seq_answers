@@ -1,3 +1,6 @@
+# DETAILS: This script is copied directly from the bowtie2 package with minor changes. 
+# All copywrite and rights reserved as stipulated in the original documentation.
+
 #!/bin/sh
 
 #
