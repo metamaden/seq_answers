@@ -21,8 +21,10 @@ ml bedtools
 ml MACS2/2.1.0.20151222-foss-2015b-Python-2.7.9
 
 #
-# 1. Obtain FASTQ Files from SRA
+# 1. Obtain FASTQ Files from SRA using SRA toolkit 
 #
+
+# Details: use fastq-dump from SRA toolkit (must have sra toolkit installed and in current dir or PATH). 
 # see FASTQC and scripts in this repo for QC instructions
 
 # test samples (colon crypts)
@@ -50,20 +52,22 @@ bowtie2 -p 8 -x /fh/fast/grady_w/ChIP_Seq/bowtie2-2.3.3.1/indexes/hg19 SRR315785
 bowtie2 -p 8 -x /fh/fast/grady_w/ChIP_Seq/bowtie2-2.3.3.1/indexes/hg19 SRR3157852.fastq > SRR3157852.sam
 
 # example Terminal output from mapping:
-#>maden@gizmoh2:/fh/fast/grady_w/ChIP_Seq/fastq/cohen_2017$ bowtie2 -p 8 -x /fh/fast/grady_w/ChIP_Seq/bowtie2-2.3.3.1/indexes/hg19 SRR3157776.fastq > SRR3157776.sam
-#>69387874 reads; of these:
-#>  69387874 (100.00%) were unpaired; of these:
-#>  4442882 (6.40%) aligned 0 times
-#>53606999 (77.26%) aligned exactly 1 time
-#>11337993 (16.34%) aligned >1 times
-#>93.60% overall alignment rate
+#>  maden@gizmoh2:/fh/fast/grady_w/ChIP_Seq/fastq/cohen_2017$ bowtie2 -p 8 -x /fh/fast/grady_w/ChIP_Seq/bowtie2-2.3.3.1/indexes/hg19 SRR3157776.fastq > SRR3157776.sam
+#>  69387874 reads; of these:
+#>    69387874 (100.00%) were unpaired; of these:
+#>    4442882 (6.40%) aligned 0 times
+#>  53606999 (77.26%) aligned exactly 1 time
+#>  11337993 (16.34%) aligned >1 times
+#>  93.60% overall alignment rate
 
 #
-# 3. File conversion 
+# 3. File conversion (for C29 test and control samples)
 #
-# for C29 (test and control samples)
+
 samtools view -bS /fh/fast/grady_w/ChIP_Seq/fastq/cohen_2017/SRR3157777.sam > /fh/fast/grady_w/ChIP_Seq/fastq/cohen_2017/SRR3157777.bam
 samtools view -bS /fh/fast/grady_w/ChIP_Seq/fastq/cohen_2017/SRR3157777.sam > /fh/fast/grady_w/ChIP_Seq/fastq/cohen_2017/SRR3157777.bam
 
+#
 # 4. Peak calling with MACS2 (for C29, using test and control samples)
+#
 # EDIT: macs2 -t /fh/fast/grady_w/ChIP_Seq/fastq/cohen_2017/SRR3157777.bed -c /fh/fast/grady_w/ChIP_Seq/fastq/cohen_2017/SRR3157850.bed -f BED -g '2.7e9' -n /fh/fast/grady_w/ChIP_Seq/fastq/cohen_2017/C29_h3k27ac_macs2
