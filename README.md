@@ -4,8 +4,6 @@ Sequencing data preprocessing
 # Purpose
 This repo is a knowledge base of preprocessing information and lessons learned in handing next generation sequencing (NGS) data. Some of the files here are recreated directly from certain resoures, such as the hg19 build shell script from bowtie 2, and all rights are preserved as stipulated by the original authors of those files. 
 
-### What is Sequencing Data?
-
 # Accessing and Handling Sequencing Data
 
 ### Platforms for Analysis of Sequencing Data
