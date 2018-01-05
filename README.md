@@ -64,6 +64,7 @@ Sequencing data generated in ChIP-Seq experiments are subjected to many of the s
 Another consideration is the potential for bias in read coverage due to open versus closed chromatin states. This potential for bias makes it even more important for ChIP-Seq experiments to include DNA input controls for tested samples, which enables control peak signal to be subtracted from the sample peaks (which include signal and noise), to increase the signal to noise ratio of the dataset. 
 
 ### Assembling Your Own Workflow for Sequencing Data
+(TBD.)
 
 # Appendices
 ## Apendix 1: List of Public Sequence Data Repositories and Systems
